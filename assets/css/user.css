@@ -56,7 +56,7 @@ a:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: white;
+  background-color: blue;
 }
 
 .navbar-custom .navbar-brand {
@@ -72,7 +72,6 @@ a:hover {
 .navbar-custom .navbar-brand .navbar-toggle {
   padding: 4px 6px;
   font-size: 16px;
-  color: #fff;
 }
 
 .navbar-custom .navbar-brand .navbar-toggle:focus,
@@ -80,8 +79,6 @@ a:hover {
   outline: 0;
 }
 
-.navbar-custom a {
-}
 
 .navbar-custom .nav li a {
   -webkit-transition: background 0.3s ease-in-out;
@@ -261,16 +258,6 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.bgimg-1 {
-  background-image: url("../../assets/img/renbg.jpg");
-  min-height: 100%;
-}
-
-.bgimg-2 {
-  background-image: url("../../assets/img/carweb.jpg");
-  min-height: 400px;
 }
 
 .caption {

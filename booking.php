@@ -24,9 +24,6 @@ if(!isset($_SESSION['login_customer'])) {
 
 <body ng-app="">
 
-
-    <!-- Navigation -->
-    <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="color: black">
         <div class="container">
             <div class="navbar-header">
@@ -36,7 +33,6 @@ if(!isset($_SESSION['login_customer'])) {
                 <a class="navbar-brand page-scroll" href="index.php">
                     Enzy Rentals </a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
 
             <?php
                 if(isset($_SESSION['login_client'])) {
@@ -100,7 +96,7 @@ if(!isset($_SESSION['login_customer'])) {
                         <a href="index.php">Home</a>
                     </li>
                     <li>
-                        <a href="clientlogin.php">Employee</a>
+                        <a href="clientlogin.php">Admin</a>
                     </li>
                     <li>
                         <a href="customerlogin.php">Customer</a>
@@ -110,9 +106,8 @@ if(!isset($_SESSION['login_customer'])) {
             </div>
             <?php   }
 ?>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
+
     </nav>
 
     <div class="container" style="margin-top: 65px;">
@@ -140,20 +135,16 @@ if(mysqli_num_rows($result1)) {
 
 ?>
 
-                    <!-- <div class="form-group"> -->
                     <img class="card-img-top"
                         src="<?php echo $car_img; ?>"
                         alt="Card image cap">
                     <h5> Selected Car:&nbsp;
                         <b><?php echo($car_name);?></b>
                     </h5>
-                    <!-- </div> -->
 
-                    <!-- <div class="form-group"> -->
                     <h5> Number Plate:&nbsp;<b>
                             <?php echo($car_nameplate);?></b></h5>
-                    <!-- </div>      -->
-                    <!-- <div class="form-group"> -->
+
                     <?php $today = date("Y-m-d") ?>
                     <label>
                         <h5>Start Date:</h5>
@@ -166,30 +157,25 @@ if(mysqli_num_rows($result1)) {
                     </label>
                     <input type="date" name="rent_end_date"
                         min="<?php echo($today);?>" required="">
-                    <!-- </div>      -->
 
-              
+                    <div>
+
+                        <h5>Fare:
+                            <b><?php echo("Rs. " . $price . "/km and Rs. " . $price_per_day . "/day");?></b>
+                            <h5>
+
+                    </div>
 
 
-                   
-                            <div >
-                                <!-- <div class="form-group"> -->
-                                <h5>Fare:
-                                    <b><?php echo("Rs. " . $price . "/km and Rs. " . $price_per_day . "/day");?></b>
-                                    <h5>
-                                        <!-- </div>    -->
-                            </div>
-                         
+                    <h5> Charge type: &nbsp;
+                        <input onclick="reveal()" type="radio" name="radio1" value="km"><b> per KM</b> &nbsp;
+                        <input onclick="reveal()" type="radio" name="radio1" value="days"><b> per day</b>
 
-                        <h5> Charge type: &nbsp;
-                            <input onclick="reveal()" type="radio" name="radio1" value="km"><b> per KM</b> &nbsp;
-                            <input onclick="reveal()" type="radio" name="radio1" value="days"><b> per day</b>
+                        <br><br>
 
-                            <br><br>
-                            <!-- <form class="form-group"> -->
-                            Select a driver: &nbsp;
-                            <select name="driver_id_from_dropdown" ng-model="myVar1">
-                                <?php
+                        Select a driver: &nbsp;
+                        <select name="driver_id_from_dropdown" ng-model="myVar1">
+                            <?php
                 $sql2 = "SELECT * FROM driver d WHERE d.driver_availability = 'yes' AND d.client_username IN (SELECT cc.client_username FROM clientcars cc WHERE cc.car_id = '$car_id')";
 $result2 = mysqli_query($conn, $sql2);
 
@@ -202,24 +188,24 @@ if(mysqli_num_rows($result2) > 0) {
         ?>
 
 
-                                <option
-                                    value="<?php echo($driver_id); ?>">
-                                    <?php echo($driver_name); ?>
+                            <option
+                                value="<?php echo($driver_id); ?>">
+                                <?php echo($driver_name); ?>
 
 
-                                    <?php }
+                                <?php }
     } else {
         ?>
-                                    Sorry! No Drivers are currently available, try again later...
-                                    <?php
+                                Sorry! No Drivers are currently available, try again later...
+                                <?php
     }
 ?>
-                            </select>
-                            <!-- </form> -->
-                            <div ng-switch="myVar1">
+                        </select>
+
+                        <div ng-switch="myVar1">
 
 
-                                <?php
+                            <?php
     $sql3 = "SELECT * FROM driver d WHERE d.driver_availability = 'yes' AND d.client_username IN (SELECT cc.client_username FROM clientcars cc WHERE cc.car_id = '$car_id')";
 $result3 = mysqli_query($conn, $sql3);
 
@@ -232,26 +218,26 @@ if(mysqli_num_rows($result3) > 0) {
 
         ?>
 
-                                <div
-                                    ng-switch-when="<?php echo($driver_id); ?>">
-                                    <h5>Driver Name:&nbsp;
-                                        <b><?php echo($driver_name); ?></b>
-                                    </h5>
-                                    <p>Gender:&nbsp;
-                                        <b><?php echo($driver_gender); ?></b>
-                                    </p>
-                                    <p>Contact:&nbsp;
-                                        <b><?php echo($driver_phone); ?></b>
-                                    </p>
-                                </div>
-                                <?php }
-    } ?>
+                            <div
+                                ng-switch-when="<?php echo($driver_id); ?>">
+                                <h5>Driver Name:&nbsp;
+                                    <b><?php echo($driver_name); ?></b>
+                                </h5>
+                                <p>Gender:&nbsp;
+                                    <b><?php echo($driver_gender); ?></b>
+                                </p>
+                                <p>Contact:&nbsp;
+                                    <b><?php echo($driver_phone); ?></b>
+                                </p>
                             </div>
-                            <input type="hidden" name="hidden_carid"
-                                value="<?php echo $car_id; ?>">
+                            <?php }
+    } ?>
+                        </div>
+                        <input type="hidden" name="hidden_carid"
+                            value="<?php echo $car_id; ?>">
 
 
-                            <input type="submit" name="submit" value="Rent Now" class="btn btn-warning pull-right">
+                        <input type="submit" name="submit" value="Rent Now" class="btn btn-warning pull-right">
                 </form>
 
             </div>
@@ -262,16 +248,6 @@ if(mysqli_num_rows($result3) > 0) {
         </div>
 
 </body>
-<footer class="site-footer">
-    <div class="container">
-        <hr>
-        <div class="row">
-            <div class="col-sm-6">
-                <h5>© <?php echo date("Y"); ?>
-                    Enzy Rentals</h5>
-            </div>
-        </div>
-    </div>
-</footer>
+
 
 </html>
