@@ -16,7 +16,7 @@ include('session_client.php'); ?>
 </head>
 
 <body>
-  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="color: black">
+  <nav class="navbar bg-primary navbar-fixed-top" role="navigation" style="color: black">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -135,7 +135,7 @@ include('session_client.php'); ?>
               required>
           </div>
 
-          <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right"> Add Driver</button>
+          <button type="submit" id="submit" name="submit" class="btn btn-dark pull-right"> Add Driver</button>
         </form>
       </div>
     </div>

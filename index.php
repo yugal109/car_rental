@@ -10,19 +10,13 @@ $conn = Connect();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ezy Rentals</title>
-    <link rel="shortcut icon" type="image/png" href="assets/img/P.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/user.css">
     <link rel="stylesheet" href="assets/w3css/w3.css">
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic,700italic" rel="stylesheet"
-        type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="color: black">
+    <nav class="navbar bg-primary navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -144,7 +138,7 @@ if(mysqli_num_rows($result1) > 0) {
                         alt="Card image cap">
                     <h5><b> <?php echo $car_name; ?> </b></h5>
                     <h6> Fare:
-                        <?php echo("Rs. " . $price . "/km & Rs." . $price_per_day . "/day"); ?>
+                        <?php echo("AUD. " . $price . "/km & AUD." . $price_per_day . "/day"); ?>
                     </h6>
 
 

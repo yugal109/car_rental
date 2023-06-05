@@ -11,20 +11,16 @@ if(!isset($_SESSION['login_customer'])) {
 
 <head>
     <script type="text/javascript" src="assets/ajs/angular.min.js"> </script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="shortcut icon" type="image/png" href="assets/img/P.png.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/w3css/w3.css">
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/custom.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/clientpage.css" />
 </head>
 
 <body ng-app="">
 
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="color: black">
+    <nav class="navbar  navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -161,7 +157,7 @@ if(mysqli_num_rows($result1)) {
                     <div>
 
                         <h5>Fare:
-                            <b><?php echo("Rs. " . $price . "/km and Rs. " . $price_per_day . "/day");?></b>
+                            <b><?php echo("AUD. " . $price . "/km and AUD. " . $price_per_day . "/day");?></b>
                             <h5>
 
                     </div>

@@ -1,12 +1,19 @@
 body,
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    padding-top: 50px;
-}
+  padding-top: 50px;
 
+}
+a{
+    color:#fff !important;
+  }
+
+  a:hover{
+    color:#158cba !important;
+  }
 #myBtn {
     display: none;
     position: fixed;
@@ -27,17 +34,3 @@ body {
     color: white;
 }
 
-.bg-4 {
-    background-color: #2f2f2f;
-    color: #ffffff;
-}
-
-footer {
-    display: block;
-}
-
-
-.edit {
-    text-shadow: 2px 2px 5px lightgreen;
-    color: green;
-}

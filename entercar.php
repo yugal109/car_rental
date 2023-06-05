@@ -18,7 +18,7 @@ include('session_client.php'); ?>
 
 <body>
 
-  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="color: black">
+  <nav class="navbar bg-primary navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -157,18 +157,7 @@ if (mysqli_num_rows($result) > 0) {
     ?>
           <div style="overflow-x:auto;">
             <table class="table table-striped">
-              <thead class="thead-dark">
-                <tr>
-                  <th></th>
-                  <th width="24%"> Name</th>
-                  <th width="15%"> Nameplate </th>
 
-                  <th width="13%"> Fare (/km) </th>
-                  <th width="13%"> Fare (/day)</th>
-
-                  <th width="1%"> Availability </th>
-                </tr>
-              </thead>
 
               <?php
         while($row = mysqli_fetch_assoc($result)) {
@@ -180,10 +169,8 @@ if (mysqli_num_rows($result) > 0) {
                       <th></th>
                       <th width="24%"> Name</th>
                       <th width="15%"> Nameplate </th>
-                      <th width="13%"> AC Fare (/km) </th>
-                      <th width="17%"> Non-AC Fare (/km)</th>
-                      <th width="13%"> AC Fare (/day)</th>
-                      <th width="17%"> Non-AC Fare (/day)</th>
+                      <th width="13%"> Fare (/km) </th>
+                      <th width="17%"> Fare (/day)</th>
                       <th width="1%"> Availability </th>
                     </tr>
                   </thead>

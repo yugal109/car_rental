@@ -7,10 +7,9 @@ $conn = Connect();
 ?>
 
 <head>
-    <link rel="shortcut icon" type="image/png" href="assets/img/P.png.png">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+
     <link rel="stylesheet" href="assets/w3css/w3.css">
     <link rel="stylesheet" type="text/css" href="assets/css/customerlogin.css">
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
@@ -19,8 +18,8 @@ $conn = Connect();
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="color: black">
+
+    <nav class="navbar bg-primary navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">

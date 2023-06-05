@@ -5,3 +5,10 @@
     border: 1px solid GREY;
     opacity: 0.9;
 }
+a{
+    color:#fff !important;
+}
+
+a:hover{
+    color:#158cba !important;
+  }

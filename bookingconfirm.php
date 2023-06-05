@@ -10,7 +10,6 @@ if(!isset($_SESSION['login_customer'])) {
 ?>
 
 <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="shortcut icon" type="image/png" href="assets/img/P.png.png">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -93,7 +92,7 @@ if($err_date >= 0) {
 
     ?>
 
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="color: black">
+    <nav class="navbar bg-primary navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -228,12 +227,12 @@ if($err_date >= 0) {
                 <?php
     if($charge_type == "days") {
         ?>
-                <h4> <strong>Fare:</strong> Rs.
+                <h4> <strong>Fare:</strong> AUD.
                     <?php echo $fare; ?>/day
                 </h4>
                 <?php } else {
                     ?>
-                <h4> <strong>Fare:</strong> Rs.
+                <h4> <strong>Fare:</strong> AUD.
                     <?php echo $fare; ?>/km
                 </h4>
 
@@ -286,7 +285,7 @@ if($err_date >= 0) {
 </body>
 <?php } else { ?>
 
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="color: black">
+<nav class="navbar bg-primarynavbar-custom navbar-fixed-top" role="navigation" style="color: black">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">

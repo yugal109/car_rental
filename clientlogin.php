@@ -22,7 +22,7 @@ if(isset($_SESSION['login_client'])) {
 </head>
 
 <body>
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="color: black">
+    <nav class="navbar bg-primary navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -137,7 +137,7 @@ if(isset($_SESSION['login_client'])) {
                                     <input class="form-control" id="client_username" type="text" name="client_username"
                                         placeholder="Username" required="" autofocus="">
                                     <span class="input-group-btn">
-                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-user"
+                                        <label class="btn btn-dark"><span class="glyphicon glyphicon-user"
                                                 aria-hidden="true"></label>
                                     </span>
                                     </span>
@@ -153,7 +153,7 @@ if(isset($_SESSION['login_client'])) {
                                     <input class="form-control" id="client_password" type="password"
                                         name="client_password" placeholder="Password" required="">
                                     <span class="input-group-btn">
-                                        <label class="btn btn-primary"><span class="glyphicon glyphicon-lock"
+                                        <label class="btn btn-dark"><span class="glyphicon glyphicon-lock"
                                                 aria-hidden="true"></span></label>
                                     </span>
 
@@ -163,8 +163,7 @@ if(isset($_SESSION['login_client'])) {
 
                         <div class="row">
                             <div class="form-group col-xs-4">
-                                <button class="btn btn-primary" name="submit" type="submit"
-                                    value=" Login ">Submit</button>
+                                <button class="btn btn-dark" name="submit" type="submit" value=" Login ">Submit</button>
 
                             </div>
 
